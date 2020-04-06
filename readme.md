@@ -4,10 +4,11 @@ By Leanne | Frontend Masters
 ## Promises - ES6
 
 **Promises do 2 things:**
-1. initiate background web browser work
-2. Return a placeholder object (promise) 
+1. initiate background web browser work - BROWSR
+2. Return a placeholder object (promise) - JS
     - containing the value that is returned
-    - containing an  onFullfilled [] array
+    - containing an  onFullfilled [] array ~ this is a hidden property
+    - once the value is returned from the fetch request, whatever functions are stored in the onFulfilled array are ran. The value recievied  is passed in as a parameter to the functions in onFullfilled.
 
 ### Fetch
 
