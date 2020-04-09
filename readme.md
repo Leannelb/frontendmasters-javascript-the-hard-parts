@@ -25,6 +25,7 @@ By Leanne | Frontend Masters
     - containing an  onFullfilled [] array ~ this is a hidden property
     - once the value is returned from the fetch request, whatever functions are stored in the onFulfilled array are ran. The value recievied  is passed in as a parameter to the functions in onFullfilled.
     - .then tells the fetch what to do when the data is returned.
+    **cannot see the onFulfilled hidden property in the console**
 
 ### Fetch
 
@@ -101,4 +102,30 @@ function display(data){
 - Generate a reusable function for this instead
 ![](images/reusable-function.png)
 
+## Classes and Prototypes
 
+### Prototype Chain & Prototypical Link
+- the indelable link/prototype link/hidden link to the function 
+- what function is linked depends on what function was passed in as a param
+```js
+const newUser = Object.create(userFunctionScore);
+```
+- is made when we use the **Object.create** method
+- Object.create: creates an empty object WITH  a hidden property __ proto__
+- link to one single object that can be used by many others, via the link. This is a **feature of javascript** 
+- if we set something to be linked to something else, it will be, though its proto property.
+- the argument passed into Object.create is always stored in the proto
+
+**can see the proto hidden property in the console and the place its linked to**
+
+### .this
+- if we run a method use .this, when the new execution context is made, immediately, this is stored in it's local memory, and whatever called the method, will be passed.
+#### key use of the this keyword
+- runa function that is going to be available to many differnt objects, through the proto link and make sure we use the keyword **.this** to access the object on which the function is being executed, to the right hand side of the dot..
+```js
+user1.increment();
+```
+## Object - Proto Property
+- all objects in js have a proto property.
+- The Object.prototype
+- - Object.prototype has the hasOwnProperty attached
