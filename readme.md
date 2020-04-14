@@ -129,3 +129,31 @@ user1.increment();
 - all objects in js have a proto property.
 - The Object.prototype
 - - Object.prototype has the hasOwnProperty attached
+
+### hasOwnProperty
+- we can use hasOwnProperty method, if user1 calls this, its found by linking to a larger object, not on the user1 object.
+- all objects have a __ proto __ property by default which links to a big object - Object.prototype full of useful functions
+- we get access to it via userFunctionStore's __ proto __ property up the chain.
+![](images/hasOwnProperty.png)
+- if you run a subfunction, within the initial function using the this. The this is lost and instead goes to global memort to find a this that isn't there.
+- Fixes for this used to be, to equal this = that. Then in the second function use the that. Not the this which has lost its context
+- We can now overcome this in a better way, using .call / .bind or an arrow function for the second function call instead.
+- When an arrow function is used, it carries over the global context of the function call with it too so the .this context is also passed.
+**it makes a lexically scoped this. Using an arrow function**
+- therefore we don't want to use arrow functions for our methods on objects, or top level function calls as there is no inner scope, it therefore does to the global scope and doesnt hold the right value for .this. 
+``` 
+see video Arrow Functions, Scope and this in Classes and Prototypes for a great understanding and code examples
+```
+
+### Object.create
+- interview
+- I prefer using Object.create for more fine control over object creation
+
+### Solution 2: The Prototype Chain
+![](images/the_prototype_chain.png)
+
+### Solution 3: Keyword New
+![](images/keywordNew.png)
+
+### Solution 3: Keyword New
+![](images/new_in_practice.png)
