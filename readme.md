@@ -157,3 +157,17 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 
 ### Solution 3: Keyword New
 ![](images/new_in_practice.png)
+
+-- some notes missing from cours end 
+
+# JavaScript - The Recent Parts
+
+## Ch1 - Intro
+
+### Transpilers
+- very common one is babal
+- give it your current code and it will make a backwards compatible version for older browsers.
+
+## Ch2 - Template strings
+- Kyle Sympson calls these Interpolated Literals or Intpoliterals
+- Template strings course questions next
