@@ -193,6 +193,7 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 - ... can be used as the final expected value and it says, collect the rest of the values, whatever is left, in an array.
 - when we destructure, were taking the smaller bits and assigning them to some other things. We then throw away the larger item keeping just the bits we need.
 - If however we may need the larger item again,we may also assign the whole item to something when destructuring using a double equals.
+**RIGHT IS ALWAYS DESTRUCTURING APPROACH IN IMAGES**
 ![](images/3doubleEqualsDestructuring.png)
 
 - if you want to leave something undeclared, if you didnt want to capture it
@@ -217,6 +218,17 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 - we can also do this for individual parameters
 - Providing a Default Value for Parameters When Destructuring
 ![](images/3DefaultValueforParameterWhenDestructuring.png)
+![](images/3DefaultValueforParameterWhenDestructuringMoreSpecific.png)
+
+#### We also have destructuring for nested arrays
+![](images/3nestedArrayDestructuring.png)
+
+![](images/3GracefulFallbackForDestructuring.png)
+
+- in destructuring the layout is
+**source, target, default**
+- i.e. b (source), second (target), 42 (default value)
+![](images/3sourceTargetDefaultDestructuring.png)
 
 
 
