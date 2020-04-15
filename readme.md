@@ -171,3 +171,52 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 ## Ch2 - Template strings
 - Kyle Sympson calls these Interpolated Literals or Intpoliterals
 - Template strings course questions next
+
+## Ch 3 - Destructuring
+- idea behind destructuring is to break up something large into smaller parts assigning each of these smaller parts (if we so wish), to individual variables / properties etc.
+
+### Example where destructuring is useful
+- when retriving from an API and it sends back a big complex JSON object, this is how we can sometimes get back a big nested object where we might only want a few of the properties
+- we might retrieve them like below:
+
+![](images/jsonretreval.png)
+
+### Solved with Destructuring
+- because it's on the lhs of the equals... its a pattern, a pattern to describe what we expect back.
+- So we can assign it to something
+- The equals is a fallback if it's not there
+- can leave entries blank if you don't want to assign them.
+- the pattern can match only the bits you want, it does't have to match the returned data in its entirety... just the bits/properties you want.
+- the code in its declaritve nature is self documenting as we can see exactly what it is we are expecting back from the api.
+![](images/declaritve.png)
+
+- ... can be used as the final expected value and it says, collect the rest of the values, whatever is left, in an array.
+- when we destructure, were taking the smaller bits and assigning them to some other things. We then throw away the larger item keeping just the bits we need.
+- If however we may need the larger item again,we may also assign the whole item to something when destructuring using a double equals.
+![](images/3doubleEqualsDestructuring.png)
+
+- if you want to leave something undeclared, if you didnt want to capture it
+- you just leave an empty position inbetween the commas
+- this is called array illusion 
+![](images/3leaveSomethingBlankDestructuring.png)
+
+### Can also use destucturing to swap items in an array
+![](images/3swappingItemsWithDestructuring.png)
+
+- say we have data which recives an array tmp
+- in destructuring we can do the destructuring directly from a parameter position.
+
+### null
+#### if null is returned, and we then try to take data from null, we would get a type error
+- the same is true if we were to try and do this during destructuring.
+- **we would get a typeerror if we tried to access a null value**
+- in order to fix this, we'd have a fallback or empty array. **|| []**
+- we do this the exact same in destructuring.
+![](images/3providingDefaultsDestructuring.png)
+
+- we can also do this for individual parameters
+- Providing a Default Value for Parameters When Destructuring
+![](images/3DefaultValueforParameterWhenDestructuring.png)
+
+
+

@@ -1,4 +1,6 @@
-function upper(strings,...values) {}
+function upper(strings,...values) {
+	
+}
 
 var name = "kyle",
 	twitter = "getify",
