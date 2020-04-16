@@ -27,13 +27,13 @@ function data() {
     return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
 }
 
-var first, second, third;
+var first, second, third; // predefined
 
 ({ 
     b: second,
     a: first = 42,
     ...third
-} = tmp = data() );
+} = tmp = data() ); // add parenthesis if it is predefined
 
 // here when we add a ... it collects the final items, whatever they are in their own object
 
