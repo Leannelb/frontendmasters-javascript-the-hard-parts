@@ -18,7 +18,7 @@
 // var tmp = data() || {} ;
 
 // var a = tmp.a;
-// var b = tmp.b;
+// var b = tmp.b || {};
 // var c = tmp.b.c;
 // var d = tmp.b.d;
 
@@ -42,7 +42,7 @@ function data () {
             b: {
                 c: 2, 
                 d: 3 
-            }
+            } = {} //default
     };
 }
 
