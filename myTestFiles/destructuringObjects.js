@@ -24,20 +24,19 @@
 //////////////   New Way - Destructuring   //////////////////
 
 function data() {
-    return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
+    // return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
+    return; // if nothing is returned
 }
 
-var first, second, third; // predefined
-
-({ 
+var { 
     b: second,
     a: first = 42,
     ...third
-} = tmp = data() ); // add parenthesis if it is predefined
+} = tmp = data() || {} ; // the || {} defines an empty object
 
 // here when we add a ... it collects the final items, whatever they are in their own object
 
 
 console.log(first, second, third);
-// 1 2 31 2 { c: 3, d: 4, e: 5, f: 6 }
+// 42 undefined {}
 
