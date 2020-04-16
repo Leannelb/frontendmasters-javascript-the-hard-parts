@@ -10,10 +10,12 @@
 // }
 
 // var tmp = data();
-// var first = tmp.a;
-// var second = tmp.b;
-// var third = tmp.c !== undefined ? tmp.c : 42;
-// providing a default value the ES6 way
+// var first, second, third;
+
+// first = tmp.a;
+// second = tmp.b;
+// third = tmp.c !== undefined ? tmp.c : 42;
+// // providing a default value the ES6 way
 
 // console.log(first, second, third);
 
@@ -25,11 +27,13 @@ function data() {
     return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
 }
 
-var  { 
+var first, second, third;
+
+({ 
     b: second,
     a: first = 42,
     ...third
-} = tmp = data() ;
+} = tmp = data() );
 
 // here when we add a ... it collects the final items, whatever they are in their own object
 
