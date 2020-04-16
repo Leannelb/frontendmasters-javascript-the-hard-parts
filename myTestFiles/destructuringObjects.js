@@ -9,11 +9,10 @@
 //     return { a: 1, b:2, c: 3 };
 // }
 
-// var tmp = data();
-// var first, second, third;
+// var tmp = data() || {} ;
 
-// first = tmp.a;
-// second = tmp.b;
+// a = tmp.a;
+// a = tmp.b;
 // third = tmp.c !== undefined ? tmp.c : 42;
 // // providing a default value the ES6 way
 
@@ -24,19 +23,21 @@
 //////////////   New Way - Destructuring   //////////////////
 
 function data() {
-    // return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
-    return; // if nothing is returned
+    return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
 }
+// ES6 WAY:
+// a = tmp.a;
+// a = tmp.b;
 
 var { 
-    b: second,
-    a: first = 42,
-    ...third
-} = tmp = data() || {} ; // the || {} defines an empty object
+    a,     //  b: a,
+    b      //  a: b
+} = data() || {} ; // the || {} defines an empty object
 
-// here when we add a ... it collects the final items, whatever they are in their own object
+// if the source and the target name are the same, 
+// in order to make it not redundant, we only list the name once
 
 
-console.log(first, second, third);
+console.log(a, b);
 // 42 undefined {}
 
