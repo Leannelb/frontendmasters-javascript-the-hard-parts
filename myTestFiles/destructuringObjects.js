@@ -6,38 +6,59 @@
 /////////////   Old Way ES6 ///////////////////// 
 
 // function data () {
-//     return { a: 1, b:2, c: 3 };
+//     return { 
+//         a: 1,
+//         b: {
+//             c: 2, 
+//             d: 3 
+//         }
+//     };
 // }
 
 // var tmp = data() || {} ;
 
-// a = tmp.a;
-// a = tmp.b;
-// third = tmp.c !== undefined ? tmp.c : 42;
-// // providing a default value the ES6 way
+// var a = tmp.a;
+// var b = tmp.b;
+// var c = tmp.b.c;
+// var d = tmp.b.d;
 
-// console.log(first, second, third);
+// console.log('a ', a);
+// console.log('b ', b);
+// console.log('c ', c);
+// console.log('d ', d);
+
+// // a  1
+// // b  { c: 2, d: 3 }
+// // c  2
+// // d  3
 
 
 
 //////////////   New Way - Destructuring   //////////////////
 
-function data() {
-    return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
+function data () {
+            return { 
+            a: 1,
+            b: {
+                c: 2, 
+                d: 3 
+            }
+    };
 }
-// ES6 WAY:
-// a = tmp.a;
-// a = tmp.b;
 
 var { 
-    a = 42,     //  b: a,
-    b      //  a: b
+    a,
+    b: {
+        c,
+        d
+    }
 } = data() || {} ; // the || {} defines an empty object
 
 // if the source and the target name are the same, 
 // in order to make it not redundant, we only list the name once
 
 
-console.log(a, b);
-// 42 undefined {}
+console.log(a, c, );
+console.log(a, c, d);
+// 1, 2, 3
 
