@@ -40,25 +40,21 @@ function data () {
             return { 
             a: 1,
             b: {
-                c: 2, 
-                d: 3 
+                x: 2,  
             } = {} //default
     };
 }
 
 var { 
     a,
+    b,
     b: {
-        c,
-        d
+        x: w;
     }
 } = data() || {} ; // the || {} defines an empty object
 
-// if the source and the target name are the same, 
-// in order to make it not redundant, we only list the name once
 
 
-console.log(a, c, );
-console.log(a, c, d);
+console.log(a, b, w);
 // 1, 2, 3
 
