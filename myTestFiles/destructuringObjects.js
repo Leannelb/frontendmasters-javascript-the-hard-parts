@@ -12,7 +12,8 @@
 // var tmp = data();
 // var first = tmp.a;
 // var second = tmp.b;
-// var third = tmp.c;
+// var third = tmp.c !== undefined ? tmp.c : 42;
+// providing a default value the ES6 way
 
 // console.log(first, second, third);
 
@@ -26,11 +27,12 @@ function data() {
 
 var  { 
     b: second,
-    a: first,
+    a: first = 42,
     ...third
 } = tmp = data() ;
 
 // here when we add a ... it collects the final items, whatever they are in their own object
+
 
 console.log(first, second, third);
 // 1 2 31 2 { c: 3, d: 4, e: 5, f: 6 }
