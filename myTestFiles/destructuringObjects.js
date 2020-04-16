@@ -30,7 +30,7 @@ function data() {
 // a = tmp.b;
 
 var { 
-    a,     //  b: a,
+    a = 42,     //  b: a,
     b      //  a: b
 } = data() || {} ; // the || {} defines an empty object
 
