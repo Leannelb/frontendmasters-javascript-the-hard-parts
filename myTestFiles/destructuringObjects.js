@@ -21,19 +21,17 @@
 //////////////   New Way - Destructuring   //////////////////
 
 function data() {
-    return { a: 1 , b: 2 };
+    return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
 }
 
-var { 
+var  { 
     b: second,
     a: first,
     c: third
 } = data();
 
-// if we try to assign something that isn't there, we get an undefined: 
-//  terminal: node destructuringObjects.js
-// 1 2 undefined
-// because above there is no three
-
+// return { a: 1 , b: 2, c: 3, d: 4, e: 5, f: 6 };
+// in this case, only the items specified get saved 
 
 console.log(first, second, third);
+// 1, 2, 3
