@@ -236,4 +236,19 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 ![](images/destructuringAndRestructuriungForAPICalls.png)
 
 
+# Array. Find and Array.include
+
+-Tells us truthy or falsy if it exists in the array
+
+![](images/trueFalseIfITExists.png)
+
+![](images/levelsOfArrFlat.png)
+
+### Flat Map
+
+![](images/flatmap.png)
+
+-COME BACK TO VIDEO FLAT & FLATMAP
+## iTERATORS AND gENERATORS
+![](images/iterators.png)
 
