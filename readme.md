@@ -252,3 +252,27 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 ## iTERATORS AND gENERATORS
 ![](images/iterators.png)
 
+- for of loop takes iterables allowing you to iterate thorough them
+
+![](images/.png)
+
+![](images/arrayIteration.png)
+
+### Object Iteration
+
+![](images/OBJECTITERATION.png)
+
+- Objects throw a type error if iteration is attempted on them
+
+**makingOurOwnObjIterator**
+- making our own iterator for objects
+- here we use the this keyword, we use it because we want to use the this keyword inside the function, but we also want it to lexically adopt the parent context
+![](images/makingOurOwnObjIterator.png)
+
+## Generators
+- Generators are a new type of funcdtion call in ES6
+- When you invoke them, they dont run, they **produce an iterater***
+- scene as it's a standard iterator, it has a .next property.
+
+
+![](images/generatorsAndIterators.png)
