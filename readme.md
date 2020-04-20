@@ -230,5 +230,10 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 - i.e. b (source), second (target), 42 (default value)
 ![](images/3sourceTargetDefaultDestructuring.png)
 
+## Destructuring and Restructuring an API Call
+- we can quicly and easily call out defaults, such as url and method here. 
+
+![](images/destructuringAndRestructuriungForAPICalls.png)
+
 
 
