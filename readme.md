@@ -273,6 +273,14 @@ see video Arrow Functions, Scope and this in Classes and Prototypes for a great 
 - Generators are a new type of funcdtion call in ES6
 - When you invoke them, they dont run, they **produce an iterater***
 - scene as it's a standard iterator, it has a .next property.
+- yeild allows the iterator to produce different values each time its iterated over.
+- if you make your own iterator, notice how the array returned is missing the final value.
+- as soon as it sees done = true it stops, effectively throwing away the value 4
 
 
 ![](images/generatorsAndIterators.png)
+
+## Star -Generate
+- Line 5 the star indicates the function is going to be the generator type
+- its a concise method with no inputs
+- yeild this[key] ~ gives out the value
