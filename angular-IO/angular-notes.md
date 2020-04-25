@@ -46,6 +46,37 @@
 - **Decorators** are functions that modify JS angular defines decorators that attach specific metadata to classes so the system knows how it should work.
 
 ## Templates, Directives & Data Binding
+- template combines
+    - HTML
+    - Angular Markup
+- Template Directives 
+    - program logic & binding markup
+    - Two types of **Data Binding:**
+        - *Event Binding* - lets app respond to user data by updating the application data
+        - *Property Binding* - lets you interpolate computed values into the HTML
+#### Before a view is defined, angular evaluates the directives and resolves the binding syntax, in the template to modify the HTML elements and DOM according to the program data and logic. 
+#### Angular supports *two-way* data binding meaning changes in the DOM are also reflected in your program data.
+- Templates use *pipes* to transform data for display.
+
+## Services & Dependency injection
+- Services allow logic/data thats not specific to one class to be defined and used across components
+    - via a service class
+        - service classes preceeded by @Injectable() decorator
+        - this decorator provides metadata that allows it to be injected as a dependancy to other classes.
+    - Dependancy injection (DI) allows component classes to be kept clean and efficent.
+    - Compont classes dont have to fetch server data, valadate user input or log into the console - these can be delegated to a service.
+
+## Routing
+- Router NgModule allows navigation amnth application states and view hierarchies
+- Router maps URL like paths to views, instead of pages.
+- When user clicks a link, the router intercepts the behavior and shows/hides view hierarchies.
+- to define navigation rules - you associate navigate paths with componets.
+![](images/angular-structure.png)
+
+
+
+
+    
 
 
 
