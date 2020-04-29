@@ -77,6 +77,17 @@
     - Directives & binding markup in component template - modify views based on the data and the logic defined.
 - DI provides services to a componet, such as router service that lets you define navigation amongst views.
 
+## Tour of HEROS
+- aquires and displays data
+- create angular components
+- use one way data binding ( read only data )
+- editable fields - 2 way binding
+- bind component methods to services, keystrokes, clicks
+- enable selection from a list then display in view
+- create shared service
+- use routing
+ 
+
 
 
 
