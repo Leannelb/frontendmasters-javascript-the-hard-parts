@@ -72,6 +72,11 @@
 - When user clicks a link, the router intercepts the behavior and shows/hides view hierarchies.
 - to define navigation rules - you associate navigate paths with componets.
 ![](images/angular-structure.png)
+- component & template define angular view 
+    - decorator on a componet adds *metadata*, including a pointer to the associated template
+    - Directives & binding markup in component template - modify views based on the data and the logic defined.
+- DI provides services to a componet, such as router service that lets you define navigation amongst views.
+
 
 
 
