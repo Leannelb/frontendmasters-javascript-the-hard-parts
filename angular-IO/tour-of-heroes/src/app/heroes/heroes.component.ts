@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from '../models/hero';
 
 @Component({
   selector: 'app-heroes',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  }
+  // hero is now an object, using an interface for definition and resusability
+  
+  
   constructor() { }
 
-  hero = "Windstorm";
+  
 
   ngOnInit(): void {
     // lifecycle hook
