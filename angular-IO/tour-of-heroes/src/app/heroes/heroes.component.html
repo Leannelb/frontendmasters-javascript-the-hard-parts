@@ -1,4 +1,26 @@
 {{hero}} 
 <!-- // [object object] shown now as its an object  -->
 <div><span>id: </span>{{ hero.id }}</div>
-<div><span>name: </span>{{ hero.name | uppercase }}</div>
+<div>
+    <label>name:
+        <input [(ngModel)]="hero.name" placeholder="name" />
+        <!-- ngModel, 2 way binding syntax banana in a box syntax   -->
+        <!-- displays the name
+        updates the property as the user types
+        data flows from component class out to the screen & back to the class  -->
+    </label>
+</div>
+
+
+
+
+<!-- Pipes Provided by Angular
+CurrencyPipe
+DatePipe
+DecimalPipe
+JsonPipe
+LowerCasePipe
+UpperCasePipe
+PercentPipe
+SlicePipe
+AsyncPipe -->

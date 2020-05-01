@@ -86,7 +86,30 @@
 - enable selection from a list then display in view
 - create shared service
 - use routing
- 
+
+## Angular pipes
+### Angular has many inbuilt pipes ready for use out of the box, they come with the framework:
+- Pipes Provided by Angular
+    - CurrencyPipe
+    - DatePipe
+    - DecimalPipe
+    - JsonPipe
+    - LowerCasePipe
+    - UpperCasePipe
+    - PercentPipe
+    - SlicePipe
+    - AsyncPipe 
+### Currency pipe
+```js
+{{ 1234.56 | currency:'CAD' }}
+``` 
+#### prints out: CA$1,234.56
+- if we instead want the symbol, add another parameter: **symbol-narrow**
+```js
+{{ 1234.56 |currency:"CAD":"symbol-narrow" }}
+``` 
+#### prints out: $1,234.56
+### You can also create your own Angular Pipes
 
 
 
