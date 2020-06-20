@@ -1,7 +1,8 @@
 <h2>My Heros</h2>
 <ul class="heros">
-    <li *ngFor="let hero of heros" (click)="onSelect(hero)">
-        <!-- Angular's event binding syntax.(click)="onSelect(hero)" -->
+    <li *ngFor="let hero of heros" 
+    [class.selected]="hero === selectedHero"
+    (click)="onSelect(hero)">
         <span class="badge">{{hero.id}} </span>{{hero.name}}
     </li>
 </ul>
@@ -19,9 +20,22 @@
 <!--//////////////    NG FOR - LOOP/ITERATION   /////////////////////////-->
 <!-- *ngFor is Angular's repeater directive. It repeats the host element for each element in a list. -->
 
+<!--//////////////////////////////////////////////////////////////////////-->
 
+<!--//////////////    NG IF - PROTECTS THE PAGE BREAKING   ///////////////-->
+<!-- When the app starts, the selectedHero is undefined by design.
+Binding expressions like {{selectedHero.name}}—must fail because there is no selected hero.
+MUST hide empty details with *ngIf - component should only display the selected hero details if the selectedHero exists. -->
 
-<!--//////////////    NGMODEL - BANNANA IN A BOX   /////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////-->
+
+<!--//////////////    CONDITIONAL STYLES   ///////////////////////////////-->
+<!-- The Angular class binding makes it easy to add and remove a CSS class conditionally. 
+    Just add [class.some-css-class]="some-condition" to the element you want to style. -->
+
+<!--//////////////////////////////////////////////////////////////////////-->
+
+<!--//////////////    NGMODEL - BANNANA IN A BOX   ///////////////////////-->
 <!-- ngModel, 2 way binding syntax banana in a box syntax   -->
 <!-- displays the name
 updates the property as the user types
