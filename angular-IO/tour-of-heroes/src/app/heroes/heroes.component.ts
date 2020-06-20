@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../models/hero';
-
+import { HEROES } from '../models/mock-heros';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  }
-  // hero is now an object, using an interface for definition and resusability
-  
+
+  heros = HEROES; 
+  // import: export const HEROES: Hero[] = [  { id: 11, name: 'Dr Nice' },... ]
   
   constructor() { }
 

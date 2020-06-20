@@ -14,6 +14,7 @@ import { HeroesComponent } from './heroes/heroes.component';
     BrowserModule,
     FormsModule  
   ],
+  // add FormsModule to the @NgModule metadata's imports array, which contains a list of external modules that the app needs.
   providers: [],
   bootstrap: [AppComponent]
 })

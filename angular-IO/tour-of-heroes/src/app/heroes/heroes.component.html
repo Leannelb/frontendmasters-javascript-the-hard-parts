@@ -1,17 +1,24 @@
-{{hero}} 
-<!-- // [object object] shown now as its an object  -->
-<div><span>id: </span>{{ hero.id }}</div>
-<div>
-    <label>name:
-        <input [(ngModel)]="hero.name" placeholder="name" />
-        <!-- ngModel, 2 way binding syntax banana in a box syntax   -->
-        <!-- displays the name
-        updates the property as the user types
-        data flows from component class out to the screen & back to the class  -->
-    </label>
-</div>
+<h2>My Heros</h2>
+<ul class="heros">
+    <li *ngFor="let hero of heros">
+        <span class="badge">{{hero.id}}</span>{{hero.name}}
+    </li>
+</ul>
 
 
+
+<!--//////////////    NG FOR - LOOP/ITERATION   /////////////////////////-->
+<!-- *ngFor is Angular's repeater directive. It repeats the host element for each element in a list. -->
+
+
+
+<!--//////////////    NGMODEL - BANNANA IN A BOX   /////////////////////////-->
+<!-- ngModel, 2 way binding syntax banana in a box syntax   -->
+<!-- displays the name
+updates the property as the user types
+data flows from component class out to the screen & back to the class  -->
+<!-- !!!ngModel belongs to the optional FormsModule and you must opt-in to using it. -->
+<!-- <label>name:<input [(ngModel)]="hero.name" placeholder="name" /></label> -->
 
 
 <!-- Pipes Provided by Angular
