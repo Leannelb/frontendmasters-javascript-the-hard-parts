@@ -7,15 +7,11 @@
     </li>
 </ul>
 
-<div *ngIf="selectedHero">
-    <h2>{{selectedHero.name | uppercase }} Details</h2>
-    <div><span>id: </span> {{selectedHero.id}}</div>
-    <div>
-        <label>name:
-            <input [(ngModel)]="selectedHero.name" placeholder="name" />
-        </label>
-    </div>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- Bind the HeroesComponent.selectedHero to the element's hero property like this. -->
+<!-- The hero property must be an Input property, annotated with the @Input() decorator, because the external HeroesComponent will bind to it like this. -->
+
+
 
 <!--//////////////    NG FOR - LOOP/ITERATION   /////////////////////////-->
 <!-- *ngFor is Angular's repeater directive. It repeats the host element for each element in a list. -->
